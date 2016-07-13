@@ -5,7 +5,6 @@ class Zombie(threading.Thread):
 
 	name = "ZOMBIE"
 
-
 	def __init__(self, openedSocket, id, address):
 		threading.Thread.__init__(self)
 

