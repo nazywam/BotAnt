@@ -2,4 +2,4 @@
 A experimental botnet-cluster written in python
 
 
-![img][img/list.png]
+![img](img/list.png)
