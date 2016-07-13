@@ -17,7 +17,7 @@ class Shell(cmd.Cmd):
 		print
 		
 		for r in listener.check():
-			print("\t".join(r))
+			print("\t\t".join(r))
 
 	def do_send(self, line):
 		parameters = line.split()
